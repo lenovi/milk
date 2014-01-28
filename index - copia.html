@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>nice</title>
+<link href="jquery-mobile/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+
+
+function resizeIframe(idIframe)
+        {
+        //Obtenemos el IFRAME a afectar
+        var miIframe=document.getElementById(idIframe);
+        //Calculamos el alto del contenido
+        var alturaPagina=miIframe.contentWindow.document.body.scrollHeight+20;
+        //Le asignamos la nueva altura
+        miIframe.style.height=alturaPagina;
+        }
+
+
+
+
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Página </h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page2">Página dos</a></li>
+            <li><a href="#page3">Página tres</a></li>
+			<li><a href="#page4">Página cuatro</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer">
+		<h4>Pie de página</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div style="background-image:url(bg-right-column2.jpg); width: 100%; height: 700px; border: 0px black; " data-role="header">
+		
+	</div>
+
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Página tres</h1>
+	</div>
+	<div data-role="content">	
+		<div data-role="content">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#" data-icon="plus">More</a></li>
+        <li><a href="#" data-icon="minus">Less</a></li>
+        <li><a href="#" data-icon="delete">Delete</a></li>
+        <li><a href="#" data-icon="check">Like</a></li>
+        <li><a href="#" data-icon="info">Information</a></li>
+        <li><a href="#" data-icon="forward">Go Forward</a></li>
+        <li><a href="#" data-icon="back">Go Back</a></li>
+        <li><a href="#" data-icon="star">Star</a></li>
+        <li><a href="#" data-icon="gear">Options</a></li>
+        <li><a href="#" data-icon="search">Search</a></li>
+      </ul>
+    </div>
+  <p>An example of what happens when a navigation bar includes more than 5 buttons.</p>
+  </div>
+	</div>
+	<div data-role="footer">
+		<h4>Pie de página</h4>
+	</div>
+</div> 
+
+<div data-role="page" id="page4">
+
+		
+		
+        <iframe id="iframeAutoajustable" src="http://127.0.0.1/Sitio%20sin%20nombre%201/" frameborder="0" scrolling="no"  onLoad="resizeIframe(this.id)"></iframe>;
+	
+</div>
+
+
+</body>
+</html>

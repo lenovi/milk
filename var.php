@@ -1,0 +1,1 @@
+<?php $dn="d10"; $quincena="1"; $ruta="2"; $proveedor="20";  $mes="2014-01"; $fecha="2014-01-10"; ?>
